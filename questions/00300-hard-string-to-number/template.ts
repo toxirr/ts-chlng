@@ -1,1 +1,1 @@
-type ToNumber<S extends string> = any
+type ToNumber<S> = S extends `${infer N extends number}` ? N : never
